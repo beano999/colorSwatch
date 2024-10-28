@@ -1,0 +1,39 @@
+body {
+    background-color: #3e3e3e;
+    transition: background-color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTitle{
+    color: #e484e3;
+    text-shadow: 0 0 10px #b541b3;
+    text-align: center;
+}
+
+.instructions{
+    color: #f36b6b;
+    text-shadow: 0 0 10px #ff0c0c;
+    text-align: center;
+}
+
+.labelHex{
+    color: #f36b6b;
+    text-shadow: 0 0 10px #ff0c0c;
+}
+
+.mainContainer{
+    background-color: #4b4a4a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px #000000;
+}
+
+footer{
+    color: #f36b6b;
+    text-shadow: 0 0 10px #ff0c0c;
+    text-align: center;
+    margin-top:auto;
+}

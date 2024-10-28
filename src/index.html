@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        body {
-            transition: background-color 0.3s;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Enter a hex value to see a range of similar or opposing colours.</h1>
+    <h1 class = "mainTitle">ColorSwatch</h1>
     <br>
-    <div>
-        <label for="hex">Hex Color:</label>
+    <div class="mainContainer">
+        <h2 class="instructions">Enter a Hex Value Below!</h2>
+        <label class="labelHex" for="hex">Hex Color:</label>
         <input type="text" id="hex" placeholder="#RRGGBB">
-        <p>OR</p>
-        <label for="hexBox">Color Picker:</label>
-        <input type="color" id="hex" value="#FFFFFF">
         <br>
         <br>
         <button id="submit">Submit</button>
@@ -26,6 +20,15 @@
     </div>
     <br>
 
+    <!--using this later to put the colors in something visual 
+    other than bg color which will be removed later-->
+    
+<div class="colorContainer">
+    <div class="colorBox" id="colorBox"></div>
+    <div class="colorText" id="colorText"></div>
+</div>
+
+    <footer> github @Beano999 - updated 10/28/2024</footer>
     <script src="./script.js"></script>
 </body>
 </html>
