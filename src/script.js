@@ -19,10 +19,15 @@ document.getElementById("submit").addEventListener("click", function() {
     var blueDec = parseInt(blue, 16);
 /* this is to test the color change for lightness it sorta works i think */
     var lightness = 200;
+    var darkness = -200;
 
     var lighterRed = Math.max(0, Math.min(255, redDec + lightness));
     var lighterGreen = Math.max(0, Math.min(255, greenDec + lightness));
     var lighterBlue = Math.max(0, Math.min(255, blueDec + lightness));
+
+    var darkerRed = Math.max(0, Math.min(255, redDec + darkness));
+    var darkerGreen = Math.max(0, Math.min(255, greenDec + darkness));
+    var darkerBlue = Math.max(0, Math.min(255, blueDec + darkness));
 
 
 
@@ -31,6 +36,11 @@ document.getElementById("submit").addEventListener("click", function() {
         lighterRed.toString(16).padStart(2, '0') +
         lighterGreen.toString(16).padStart(2, '0') +
         lighterBlue.toString(16).padStart(2, '0');
+
+    var finalOutputDark = "#" +
+        darkerRed.toString(16).padStart(2, '0') +
+        darkerGreen.toString(16).padStart(2, '0') +
+        darkerBlue.toString(16).padStart(2, '0');
 
     // Convert to hex and ensure two characters (this isnt really a needed calc and might be removed later)
     var finalOutput = "#" +
@@ -48,6 +58,10 @@ document.getElementById("submit").addEventListener("click", function() {
     document.getElementById("color-1").style.backgroundColor = finalOutputLight;
     document.getElementById("textColor-1").style.color = finalOutput;
     document.getElementById("textColor-1").innerText = finalOutputLight;
+
+    document.getElementById("color-2").style.backgroundColor = finalOutputDark;
+    document.getElementById("textColor-2").style.color = finalOutput;
+    document.getElementById("textColor-2").innerText = finalOutputDark;
 
     /* this is to see if the input color is being read into the script correctly
     console.log(finalOutput);
