@@ -1,0 +1,68 @@
+<!--
+Ben Wartman | ColorSwatch | 11/7/2024 | app.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorSwatch | App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = "topBar">
+        <div class = "logo"><h1 class = "mainTitle">ColorSwatch</h1></div>
+    </div>
+    
+    <br>
+    <div class="mainContainer">
+        <h2 class="instructions">Enter a Hex Value Below!</h2>
+        <label class="labelHex" for="hex">Hex Color:</label>
+        <input type="text" id="hex" placeholder="#RRGGBB">
+        <br>
+        <br>
+        <button id="submit">Submit</button>
+
+    </div>
+    <br>
+
+    <!--using this later to put the colors in something visual 
+    other than bg color which will be removed later-->
+    
+<div class="colorContainer">
+    <div class="colorBox" id="colorBox">
+        <div id="color-1">
+            <h2 class="colorName" id="textColor-1">lighter version</h2>
+            <!--
+            <br>
+            <label class="shadeSlider" for = "shade">Shade:</label>
+            <input type="range" id="shade" min="-200" max="200" value="0">
+            -->
+        </div>
+        <div id="color-0">
+            <h2 class="colorName" id="textColor-0">original</h2>
+            <!--
+            <br>
+            <label class="shadeSlider" for = "shade">Shade:</label>
+            <input type="range" id="shade" min="-200" max="200" value="0">
+            -->
+        </div>
+        <div id="color-2">
+            <h2 class="colorName" id="textColor-2">darker version</h2>
+            <!--
+            <br>
+            <label class="shadeSlider" for = "shade">Shade:</label>
+            <input type="range" id="shade" min="-200" max="200" value="0">
+            -->
+        </div>
+    </div>
+</div>
+<div class="buttonContainer">
+    <a class= "simulatedButton" href= "./index.html" id= "backButton">Back</a>
+</div>
+
+<footer id = "footer" > <a id = "footer" href="https://github.com/beano999">github @Beano999</a> - updated 11/7/2024</footer>
+    <script src="./script.js"></script>
+</body>
+</html>

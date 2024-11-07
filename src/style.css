@@ -1,3 +1,7 @@
+/*
+Ben Wartman | ColorSwatch | 11/7/2024 | style.css
+*/
+
 body {
     background-color: #3e3e3e;
     transition: background-color 0.3s;
@@ -5,10 +9,11 @@ body {
     flex-direction: column;
 }
 
-.mainTitle{
+.mainTitle {
     color: #e484e3;
     text-shadow: 0 0 10px #b541b3;
     text-align: center;
+    margin: 0; /* Ensures no extra margin around the title */
 }
 
 .instructions{
@@ -30,6 +35,36 @@ body {
     box-shadow: 0 0 10px #000000;
 }
 
+#openingPrompt {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+    white-space: wrap; /* makes the text wrap instead of continue off screen */
+    overflow: hidden;
+    border-right: 3px solid #ffffff; /* Simulated cursor */
+    animation: blink-caret 0.75s step-end infinite; /* Blinking cursor animation */
+    transition: 1s;
+}
+
+#aboutPrompt {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Courier New', monospace; 
+    display: inline-block;
+    white-space: wrap; /* makes the text wrap instead of continue off screen */
+    overflow: hidden;
+    border-right: 3px solid #ffffff; /* Simulated cursor doesnt fully work here because the text goes past one line (by next commit this will be fixed) */
+    animation: blink-caret 0.75s step-end infinite; /* Blinking cursor animation */
+    transition: 1s;
+}
+@keyframes blink-caret {
+    50% {
+        border-color: transparent; /* Make the border disappear halfway through */
+    }
+}
+
+
 .colorContainer{
     display: flex;
     justify-content: center;
@@ -47,6 +82,46 @@ body {
     box-shadow: 0 0 10px #000000;
     background-color: #848484;
     
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.simulatedButton{
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px #000000;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.simulatedButton:hover{
+    opacity: 75%;
+}
+
+.simulatedBackButton {
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 10px; 
+    box-shadow: 0 0 10px #000000;
+    cursor: pointer;
+    transition: background-color 1s;
+    flex-shrink: 0; 
+}
+
+.simulatedBackButton:hover{
+    opacity: 75%;
 }
 
 #color-0{
@@ -67,9 +142,29 @@ body {
     max-width: 20%;
 }
 
-footer{
+.topBar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Centers the logo horizontally */
+    flex-grow: 1; /* Allows the logo to take available space */
+}
+
+
+#footer{
     color: #f36b6b;
-    text-shadow: 0 0 10px #ff0c0c;
+    text-shadow: 0 0 10px ;
     text-align: center;
     margin-top: auto;
+}
+
+#footer :hover{
+    opacity: 75%;
 }
